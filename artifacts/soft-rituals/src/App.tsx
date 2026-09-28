@@ -266,7 +266,7 @@ function AppContent() {
           <div className="wrap hero-grid">
             <div>
               <div className="hero-eyebrow"><span className="dot" /> Digital &amp; physical, made to work together</div>
-              <h1>Made with love <em>for real life.</em></h1>
+              <h1>Made with love.</h1>
               <p className="hero-sub">Planners, journals and paper goods designed to turn ordinary planning into something you actually enjoy — one soft ritual at a time.</p>
               <div className="hero-cta"><a href="#shop" className="btn btn-primary" data-testid="link-shop-collection">Shop the collection {iconArrow}</a><a href="#rituals" className="btn btn-outline" data-testid="link-explore-rituals">Explore rituals</a></div>
             </div>
@@ -295,7 +295,41 @@ function AppContent() {
 
         <section className="section-pad"><div className="wrap paired-wrap"><Reveal className="showcase-visual"><div className="bokeh bokeh-1" /><div className="bokeh bokeh-2" /><Device showcase /><div className="showcase-badge" aria-hidden="true"><svg viewBox="0 0 120 120" width="46"><path d="M34 58h44l-4 26a10 10 0 0 1-10 9H48a10 10 0 0 1-10-9z" fill="var(--paper)" stroke="var(--ink)" strokeWidth="2" /><path d="M78 62c10-2 16 4 14 12s-10 10-16 8" fill="none" stroke="var(--ink)" strokeWidth="2" /></svg></div></Reveal><div className="pair-copy"><span className="eyebrow">Meet the planner</span><h2>One page, opened slowly — not a dashboard to manage.</h2><p>The Sunday Reset Digital Planner is designed the way we would want to use it ourselves: legible, uncluttered, and pleasant to open every morning on your iPad, tablet or laptop.</p><div className="benefits-list"><div className="benefit-row"><span className="benefit-check">✓</span> Hyperlinked tabs for instant navigation between months, weeks and days</div><div className="benefit-row"><span className="benefit-check">✓</span> Designed for GoodNotes, Notability and standard PDF annotation apps</div><div className="benefit-row"><span className="benefit-check">✓</span> A calm, legible layout — never a cluttered dashboard</div><div className="benefit-row"><span className="benefit-check">✓</span> Instant download, ready to use the same evening</div></div><a href="#shop" className="btn btn-primary" data-testid="link-see-planners">See Sunday Reset {iconArrow}</a></div></div></section>
 
-        <section className="expand-section" aria-labelledby="desk-edit-title"><div className="expand-pin"><div className="expand-heading"><span className="eyebrow" id="desk-edit-title">The desk edit</span></div><div className="expand-frame" tabIndex={0}><div className="texture" /><div className="desk-shapes"><div className="obj obj-1" /><div className="obj obj-2" /><div className="obj obj-3" /><div className="obj obj-4" /><div className="device-mock desk-ipad"><div className="device-cam" /><div className="device-screen"><div className="ds-header"><span className="ds-month">Today</span><span className="ds-dots">•••</span></div><div className="ds-list"><div className="row"><span className="box done" /> Tidy the desk</div><div className="row"><span className="box" /> Light the candle</div></div></div></div><svg className="desk-illustration desk-notebook" viewBox="0 0 120 120" width="64" aria-hidden="true"><rect x="20" y="24" width="70" height="86" rx="6" fill="var(--cream)" stroke="var(--ink)" strokeWidth="2" transform="rotate(-6 55 67)" /><path d="m34 46 42-8M36 58l42-8M38 70l30-6" stroke="var(--taupe)" strokeWidth="2" strokeLinecap="round" transform="rotate(-6 55 67)" /><path d="m78 30 20-14M96 14l5 5" stroke="var(--rose-deep)" strokeWidth="3" strokeLinecap="round" /></svg><svg className="desk-illustration desk-plant" viewBox="0 0 120 120" width="70" aria-hidden="true"><path d="M42 78h36l-5 24a4 4 0 0 1-4 3H51a4 4 0 0 1-4-3z" fill="var(--cocoa)" /><path d="M60 78V40" stroke="var(--ink)" strokeWidth="2" /><path d="M60 55c-14-4-18-16-14-26 12 2 18 12 14 26z" fill="var(--lilac)" stroke="var(--ink)" strokeWidth="1.5" /><path d="M60 66c14-2 20-12 18-22-13 0-20 8-18 22z" fill="var(--sky)" stroke="var(--ink)" strokeWidth="1.5" /></svg><svg className="desk-illustration desk-cup" viewBox="0 0 120 120" width="60" aria-hidden="true"><path d="M34 58h44l-4 26a10 10 0 0 1-10 9H48a10 10 0 0 1-10-9z" fill="var(--paper)" stroke="var(--ink)" strokeWidth="2" /><path d="M78 62c10-2 16 4 14 12s-10 10-16 8M44 40c2-6 0-10-4-14M56 38c2-8-1-12-4-16" stroke="var(--cocoa)" strokeWidth="2" fill="none" strokeLinecap="round" /></svg><div className="desk-textile" /></div><div className="desk-tip">Hover or focus the desk to notice the little details.</div><div className="expand-caption"><span>Everything has its place, softly.</span></div></div></div></section>
+        <section className="expand-section" aria-labelledby="desk-edit-title">
+          <div className="expand-pin">
+            <div className="expand-heading">
+              <div>
+                <span className="eyebrow">The desk edit</span>
+                <h2 id="desk-edit-title">A softer start to the week.</h2>
+              </div>
+              <p>Three small resets for the space around you.</p>
+            </div>
+            <div className="expand-frame" tabIndex={0} aria-label="Illustrated desk edit with a planner, notebook, plant, and cup">
+              <div className="texture" />
+              <div className="desk-shapes">
+                <div className="obj obj-1" /><div className="obj obj-2" /><div className="obj obj-3" /><div className="obj obj-4" />
+                <div className="device-mock desk-ipad">
+                  <div className="device-cam" />
+                  <div className="device-screen">
+                    <div className="ds-header"><span className="ds-month">Today</span><span className="ds-dots">•••</span></div>
+                    <div className="ds-list"><div className="row"><span className="box done" /> Tidy the desk</div><div className="row"><span className="box" /> Light the candle</div></div>
+                  </div>
+                </div>
+                <svg className="desk-illustration desk-notebook" viewBox="0 0 120 120" width="64" aria-hidden="true"><rect x="20" y="24" width="70" height="86" rx="6" fill="var(--cream)" stroke="var(--ink)" strokeWidth="2" transform="rotate(-6 55 67)" /><path d="m34 46 42-8M36 58l42-8M38 70l30-6" stroke="var(--taupe)" strokeWidth="2" strokeLinecap="round" transform="rotate(-6 55 67)" /><path d="m78 30 20-14M96 14l5 5" stroke="var(--rose-deep)" strokeWidth="3" strokeLinecap="round" /></svg>
+                <svg className="desk-illustration desk-plant" viewBox="0 0 120 120" width="70" aria-hidden="true"><path d="M42 78h36l-5 24a4 4 0 0 1-4 3H51a4 4 0 0 1-4-3z" fill="var(--cocoa)" /><path d="M60 78V40" stroke="var(--ink)" strokeWidth="2" /><path d="M60 55c-14-4-18-16-14-26 12 2 18 12 14 26z" fill="var(--lilac)" stroke="var(--ink)" strokeWidth="1.5" /><path d="M60 66c14-2 20-12 18-22-13 0-20 8-18 22z" fill="var(--sky)" stroke="var(--ink)" strokeWidth="1.5" /></svg>
+                <svg className="desk-illustration desk-cup" viewBox="0 0 120 120" width="60" aria-hidden="true"><path d="M34 58h44l-4 26a10 10 0 0 1-10 9H48a10 10 0 0 1-10-9z" fill="var(--paper)" stroke="var(--ink)" strokeWidth="2" /><path d="M78 62c10-2 16 4 14 12s-10 10-16 8M44 40c2-6 0-10-4-14M56 38c2-8-1-12-4-16" stroke="var(--cocoa)" strokeWidth="2" fill="none" strokeLinecap="round" /></svg>
+                <div className="desk-textile" />
+              </div>
+              <div className="desk-note desk-note-left"><strong>01</strong><span>Clear one corner</span><small>Make room for what matters.</small></div>
+              <div className="desk-note desk-note-right"><strong>02</strong><span>Open Sunday Reset</span><small>Ten quiet minutes is enough.</small></div>
+              <div className="expand-caption"><span>Everything has its place, softly.</span></div>
+            </div>
+            <div className="expand-foot">
+              <p>Keep the ritual small. Let the room do less.</p>
+              <a href="#shop" className="text-link" data-testid="link-desk-sunday-reset">Explore Sunday Reset {iconArrow}</a>
+            </div>
+          </div>
+        </section>
 
         <section className="section-pad" id="rituals"><div className="wrap"><div className="section-head"><div><span className="eyebrow">Collections</span><h2>Shop by ritual</h2></div><p>Every collection is built around a moment in your week — not a category on a shelf.</p></div><div className="rituals-list">{[
           ['Ritual 01', 'Sunday Reset', 'A gentle way to close one week and open the next — planners and pads for slowing down before Monday arrives.', 'linear-gradient(150deg,var(--rose),var(--cream))'],
