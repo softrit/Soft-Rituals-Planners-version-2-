@@ -34,7 +34,7 @@ const products: Product[] = [
     price: 12,
     tag: 'Digital',
     img: 'pimg-2',
-    description: 'A clean Notion workspace for everyday notes, without the clutter of a productivity system to manage.',
+    description: 'A clean Notion workspace for everyday notes, with just enough structure to keep ideas moving.',
     includes: ['Daily notes space', 'Simple weekly view', 'Gentle capture prompts'],
     available: false,
   },
@@ -142,6 +142,49 @@ function Reveal({ children, className = '' }: { children: React.ReactNode; class
   return <div className={`reveal ${className}`}>{children}</div>;
 }
 
+function PlannerProductMockup() {
+  return (
+    <div className="planner-product-mockup" aria-hidden="true">
+      <div className="planner-product-shadow" />
+      <div className="planner-product-device">
+        <div className="planner-product-screen">
+          <div className="planner-product-top"><span>Sunday Reset</span><span>2027</span></div>
+          <div className="planner-product-week"><span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span><span>SUN</span><b>03</b><b>04</b><b>05</b><b>06</b><b className="active">07</b><b>08</b><b>09</b></div>
+          <div className="planner-product-lines"><span /><span /><span /><span /></div>
+          <div className="planner-product-footer">A gentle plan for the week ahead.</div>
+        </div>
+      </div>
+      <div className="planner-product-paper"><strong>Sunday Reset</strong><span>Digital planner</span><i /></div>
+    </div>
+  );
+}
+
+function ProductSoonArtwork({ id }: { id: string }) {
+  if (id === 'p2') return <svg className="product-artwork" viewBox="0 0 120 150" aria-hidden="true"><path d="M22 28c18-7 29-5 38 2 9-7 20-9 38-2v91c-16-7-28-6-38 2-10-8-22-9-38-2z" fill="var(--paper)" stroke="var(--ink)" strokeWidth="2" /><path d="M60 30v91M34 53h18M34 64h18M34 75h14M68 53h18M68 64h18M68 75h14" stroke="var(--sky)" strokeWidth="3" strokeLinecap="round" /><path d="m88 23 15 15-6 6-15-15z" fill="var(--butter)" stroke="var(--ink)" strokeWidth="2" /></svg>;
+  if (id === 'p3') return <svg className="product-artwork" viewBox="0 0 120 150" aria-hidden="true"><rect x="24" y="30" width="70" height="84" rx="5" fill="var(--cream)" stroke="var(--ink)" strokeWidth="2" transform="rotate(5 59 72)" /><rect x="18" y="24" width="70" height="84" rx="5" fill="var(--paper)" stroke="var(--ink)" strokeWidth="2" /><path d="M28 48h50M28 63h50M28 78h50M28 93h30" stroke="var(--rose-deep)" strokeWidth="2" strokeLinecap="round" /><path d="M34 34v-8M48 34v-8M62 34v-8M76 34v-8" stroke="var(--ink)" strokeWidth="2" strokeLinecap="round" /></svg>;
+  if (id === 'p4') return <svg className="product-artwork" viewBox="0 0 120 150" aria-hidden="true"><rect x="27" y="20" width="66" height="104" rx="8" fill="var(--rose-deep)" stroke="var(--ink)" strokeWidth="2" transform="rotate(5 60 72)" /><path d="M60 25v98" stroke="var(--ink)" strokeWidth="1.5" opacity=".45" /><path d="M43 56c12-12 24-12 35 0-12 8-24 8-35 0zM47 72h26M47 82h20" fill="none" stroke="var(--paper)" strokeWidth="2" strokeLinecap="round" /><path d="M82 112c7 8 7 14 2 19" fill="none" stroke="var(--cocoa)" strokeWidth="2" /></svg>;
+  if (id === 'p5') return <svg className="product-artwork" viewBox="0 0 120 150" aria-hidden="true"><rect x="23" y="52" width="74" height="60" rx="7" fill="var(--paper)" stroke="var(--ink)" strokeWidth="2" transform="rotate(-6 60 82)" /><rect x="31" y="34" width="62" height="68" rx="6" fill="var(--sky)" stroke="var(--ink)" strokeWidth="2" transform="rotate(7 62 68)" /><rect x="28" y="29" width="58" height="68" rx="6" fill="var(--butter)" stroke="var(--ink)" strokeWidth="2" /><path d="M40 50h34M40 62h25M40 74h30" stroke="var(--ink)" strokeWidth="2" strokeLinecap="round" /></svg>;
+  if (id === 'p6') return <svg className="product-artwork" viewBox="0 0 120 150" aria-hidden="true"><path d="M19 38c15-6 28-5 41 3 13-8 26-9 41-3v76c-14-6-27-5-41 3-14-8-27-9-41-3z" fill="var(--paper)" stroke="var(--ink)" strokeWidth="2" /><path d="M60 42v75M31 59h20M31 70h20M69 59h20M69 70h18" stroke="var(--lilac)" strokeWidth="3" strokeLinecap="round" /><path d="m86 24 14 8-31 66-14-8z" fill="var(--butter)" stroke="var(--ink)" strokeWidth="2" /></svg>;
+  if (id === 'p7') return <svg className="product-artwork" viewBox="0 0 120 150" aria-hidden="true"><rect x="24" y="36" width="66" height="80" rx="7" fill="var(--paper)" stroke="var(--ink)" strokeWidth="2" transform="rotate(-8 57 76)" /><rect x="34" y="28" width="66" height="80" rx="7" fill="var(--cream)" stroke="var(--ink)" strokeWidth="2" transform="rotate(7 67 68)" /><circle cx="66" cy="58" r="16" fill="var(--lilac)" stroke="var(--ink)" strokeWidth="1.5" /><path d="M66 42a16 16 0 0 0 0 32 11 11 0 0 1 0-32z" fill="var(--paper)" /><path d="M49 87h34M54 97h22" stroke="var(--taupe)" strokeWidth="2" strokeLinecap="round" /></svg>;
+  return <svg className="product-artwork" viewBox="0 0 120 150" aria-hidden="true"><rect x="24" y="30" width="72" height="88" rx="8" fill="var(--paper)" stroke="var(--ink)" strokeWidth="2" /><circle cx="43" cy="52" r="10" fill="var(--rose)" stroke="var(--ink)" strokeWidth="1.5" /><path d="M39 52h8M43 48v8" stroke="var(--ink)" strokeWidth="1.5" strokeLinecap="round" /><path d="M67 44c8-8 18 2 10 10-8 8-18-2-10-10zM68 78c12-5 17 9 6 13-11 4-17-9-6-13z" fill="var(--butter)" stroke="var(--ink)" strokeWidth="1.5" /><path d="M38 91c7-9 18 1 10 9-8 8-18-1-10-9z" fill="var(--sky)" stroke="var(--ink)" strokeWidth="1.5" /></svg>;
+}
+
+function ProductArtwork({ product }: { product: Product }) {
+  return (
+    <div className={`product-img ${product.img} has-artwork`}>
+      {product.available ? <PlannerProductMockup /> : <ProductSoonArtwork id={product.id} />}
+    </div>
+  );
+}
+
+function RitualIllustration({ name }: { name: string }) {
+  if (name === 'Sunday Reset') return <svg className="ritual-artwork" viewBox="0 0 120 120" aria-hidden="true"><ellipse cx="60" cy="88" rx="34" ry="7" fill="var(--rose-deep)" opacity=".45" /><path d="M34 58h44l-4 26a10 10 0 0 1-10 9H48a10 10 0 0 1-10-9z" fill="var(--paper)" stroke="var(--ink)" strokeWidth="2" /><path d="M78 62c10-2 16 4 14 12s-10 10-16 8M44 40c2-6 0-10-4-14M56 38c2-8-1-12-4-16M68 40c1-6-1-10-4-14" stroke="var(--cocoa)" strokeWidth="2" fill="none" strokeLinecap="round" /><ellipse cx="56" cy="58" rx="22" ry="4" fill="var(--rose-deep)" opacity=".6" /></svg>;
+  if (name === 'Study Rituals') return <svg className="ritual-artwork" viewBox="0 0 120 120" aria-hidden="true"><path d="M20 34c14-6 28-6 40 2 12-8 26-8 40-2v58c-14-6-28-6-40 2-12-8-26-8-40-2z" fill="var(--paper)" stroke="var(--ink)" strokeWidth="2" /><path d="M60 36v58M28 46h22M28 56h22M28 66h16M70 46h22M70 56h22M70 66h16" stroke="var(--sky)" strokeWidth="3" strokeLinecap="round" /><path d="m78 20 18 18-6 6-18-18z" fill="var(--butter)" stroke="var(--ink)" strokeWidth="2" /></svg>;
+  if (name === 'Self-Care') return <svg className="ritual-artwork" viewBox="0 0 120 120" aria-hidden="true"><path d="M50 100c0-30 4-46 10-58M60 100c2-28 8-44 16-54M70 100c4-26 12-40 20-48" stroke="var(--cocoa)" strokeWidth="2" fill="none" strokeLinecap="round" /><circle cx="60" cy="38" r="10" fill="var(--rose-deep)" stroke="var(--ink)" strokeWidth="1.5" /><circle cx="80" cy="46" r="8" fill="var(--rose-deep)" stroke="var(--ink)" strokeWidth="1.5" /><circle cx="45" cy="46" r="8" fill="var(--rose)" stroke="var(--ink)" strokeWidth="1.5" /><circle cx="60" cy="38" r="3" fill="var(--butter)" /><circle cx="80" cy="46" r="2.4" fill="var(--butter)" /><circle cx="45" cy="46" r="2.4" fill="var(--butter)" /></svg>;
+  if (name === 'Everyday Organisation') return <svg className="ritual-artwork" viewBox="0 0 120 120" aria-hidden="true"><path d="M42 78h36l-5 24a4 4 0 0 1-4 3H51a4 4 0 0 1-4-3z" fill="var(--cocoa)" /><path d="M60 78V40M60 55c-14-4-18-16-14-26 12 2 18 12 14 26zM60 66c14-2 20-12 18-22-13 0-20 8-18 22z" stroke="var(--ink)" strokeWidth="2" fill="var(--sky)" /><path d="M46 53c5-9 10-13 14-13" stroke="var(--ink)" strokeWidth="2" fill="none" /><ellipse cx="60" cy="78" rx="20" ry="5" fill="var(--line-soft)" /></svg>;
+  return <svg className="ritual-artwork" viewBox="0 0 120 120" aria-hidden="true"><ellipse cx="60" cy="90" rx="30" ry="8" fill="var(--butter)" stroke="var(--ink)" strokeWidth="2" /><ellipse cx="60" cy="78" rx="26" ry="7" fill="var(--butter)" stroke="var(--ink)" strokeWidth="2" /><ellipse cx="60" cy="66" rx="22" ry="6" fill="var(--butter)" stroke="var(--ink)" strokeWidth="2" /><path d="M60 66c-2-10 0-18 4-24M64 42c8-2 12 4 8 10-6 2-10-4-8-10z" stroke="var(--cocoa)" strokeWidth="2" strokeLinecap="round" fill="var(--rose-deep)" /></svg>;
+}
+
 function ProductCard({ product, onOpen, onAdd }: { product: Product; onOpen: (product: Product) => void; onAdd: (id: string) => void }) {
   return (
     <article className={`product-card ${product.available ? '' : 'soon'}`} data-testid={`card-product-${product.id}`}>
@@ -155,7 +198,7 @@ function ProductCard({ product, onOpen, onAdd }: { product: Product; onOpen: (pr
         data-testid={`media-product-${product.id}`}
       >
         <span className={`product-tag ${product.available ? '' : 'soon-tag'}`}>{product.available ? 'Available now' : 'Coming soon'}</span>
-        <div className={`product-img ${product.img}`} />
+        <ProductArtwork product={product} />
         {product.available && <button className="product-add" type="button" onClick={(event) => { event.stopPropagation(); onAdd(product.id); }} data-testid={`button-add-${product.id}`}>Add to cart — {product.price} €</button>}
       </div>
       <div className="product-info">
@@ -195,6 +238,16 @@ function AppContent() {
     document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe(element));
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => { window.removeEventListener('scroll', handleScroll); revealObserver.disconnect(); };
+  }, []);
+
+  useEffect(() => {
+    const targetId = window.location.hash.slice(1);
+    if (!targetId) return;
+    const timer = window.setTimeout(() => {
+      const target = document.getElementById(targetId);
+      if (target) window.scrollTo({ top: Math.max(0, target.getBoundingClientRect().top + window.scrollY - 80), behavior: 'auto' });
+    }, 60);
+    return () => window.clearTimeout(timer);
   }, []);
 
   useEffect(() => {
@@ -293,7 +346,7 @@ function AppContent() {
 
         <section className="section-pad brand-intro"><div className="wrap"><Reveal><h2>Make space for the things that matter — <em>one page, one pause at a time.</em></h2></Reveal><Reveal><p>We design small tools, not big promises. No productivity system to master, no perfect routine to fail at — just quiet, considered pieces that make the everyday feel a little more intentional.</p></Reveal></div></section>
 
-        <section className="section-pad"><div className="wrap paired-wrap"><Reveal className="showcase-visual"><div className="bokeh bokeh-1" /><div className="bokeh bokeh-2" /><Device showcase /><div className="showcase-badge" aria-hidden="true"><svg viewBox="0 0 120 120" width="46"><path d="M34 58h44l-4 26a10 10 0 0 1-10 9H48a10 10 0 0 1-10-9z" fill="var(--paper)" stroke="var(--ink)" strokeWidth="2" /><path d="M78 62c10-2 16 4 14 12s-10 10-16 8" fill="none" stroke="var(--ink)" strokeWidth="2" /></svg></div></Reveal><div className="pair-copy"><span className="eyebrow">Meet the planner</span><h2>One page, opened slowly — not a dashboard to manage.</h2><p>The Sunday Reset Digital Planner is designed the way we would want to use it ourselves: legible, uncluttered, and pleasant to open every morning on your iPad, tablet or laptop.</p><div className="benefits-list"><div className="benefit-row"><span className="benefit-check">✓</span> Hyperlinked tabs for instant navigation between months, weeks and days</div><div className="benefit-row"><span className="benefit-check">✓</span> Designed for GoodNotes, Notability and standard PDF annotation apps</div><div className="benefit-row"><span className="benefit-check">✓</span> A calm, legible layout — never a cluttered dashboard</div><div className="benefit-row"><span className="benefit-check">✓</span> Instant download, ready to use the same evening</div></div><a href="#shop" className="btn btn-primary" data-testid="link-see-planners">See Sunday Reset {iconArrow}</a></div></div></section>
+        <section className="section-pad"><div className="wrap paired-wrap"><Reveal className="showcase-visual"><div className="bokeh bokeh-1" /><div className="bokeh bokeh-2" /><Device showcase /><div className="showcase-badge" aria-hidden="true"><svg viewBox="0 0 120 120" width="46"><path d="M34 58h44l-4 26a10 10 0 0 1-10 9H48a10 10 0 0 1-10-9z" fill="var(--paper)" stroke="var(--ink)" strokeWidth="2" /><path d="M78 62c10-2 16 4 14 12s-10 10-16 8" fill="none" stroke="var(--ink)" strokeWidth="2" /></svg></div></Reveal><div className="pair-copy"><span className="eyebrow">Meet the planner</span><h2>One page, opened slowly — with room to breathe.</h2><p>The Sunday Reset Digital Planner is designed the way we would want to use it ourselves: legible, uncluttered, and pleasant to open every morning on your iPad, tablet or laptop.</p><div className="benefits-list"><div className="benefit-row"><span className="benefit-check">✓</span> Hyperlinked tabs for instant navigation between months, weeks and days</div><div className="benefit-row"><span className="benefit-check">✓</span> Designed for GoodNotes, Notability and standard PDF annotation apps</div><div className="benefit-row"><span className="benefit-check">✓</span> A calm, legible layout with space to think</div><div className="benefit-row"><span className="benefit-check">✓</span> Instant download, ready to use the same evening</div></div><a href="#shop" className="btn btn-primary" data-testid="link-see-planners">See Sunday Reset {iconArrow}</a></div></div></section>
 
         <section className="expand-section" aria-labelledby="desk-edit-title">
           <div className="expand-pin">
@@ -337,7 +390,7 @@ function AppContent() {
           ['Ritual 03', 'Self-Care', 'Journals and reflection cards for the pauses in between — no pressure to fill every page.', 'linear-gradient(150deg,var(--lilac),var(--cream))'],
           ['Ritual 04', 'Everyday Organisation', 'The quiet backbone of your week — notes, lists and small systems that stay out of the way.', 'linear-gradient(150deg,var(--butter),var(--cream))'],
           ['Ritual 05', 'Money & Planning', 'A calmer way to look at your budget — trackers designed to inform, never to guilt.', 'linear-gradient(150deg,var(--paper),var(--rose))'],
-        ].map(([number, name, description, background], index) => <Reveal className="ritual-row" key={name}><div><span className="ritual-number">{number}</span><h3 className="ritual-name">{name}</h3><p className="ritual-desc">{description}</p><a href="#shop" className="ritual-link" data-testid={`link-ritual-${index}`}>Shop the ritual {iconArrow}</a></div><div className="ritual-visual" style={{ background }}><div className="ritual-motif"><svg viewBox="0 0 120 120" width="88" aria-hidden="true"><circle cx="60" cy="52" r="27" fill="var(--paper)" stroke="var(--ink)" strokeWidth="2" /><path d="M38 60h44M45 74h30M52 36h16" stroke="var(--rose-deep)" strokeWidth="4" strokeLinecap="round" /><path d="M60 25v-9" stroke="var(--cocoa)" strokeWidth="2" strokeLinecap="round" /></svg></div></div></Reveal>)}</div></div></section>
+        ].map(([number, name, description, background], index) => <Reveal className="ritual-row" key={name}><div><span className="ritual-number">{number}</span><h3 className="ritual-name">{name}</h3><p className="ritual-desc">{description}</p><a href="#shop" className="ritual-link" data-testid={`link-ritual-${index}`}>Shop the ritual {iconArrow}</a></div><div className="ritual-visual" style={{ background }}><div className="ritual-motif"><RitualIllustration name={name} /></div></div></Reveal>)}</div></div></section>
 
         <section className="section-pad" id="shop"><div className="wrap"><div className="section-head"><div><span className="eyebrow">Featured</span><h2>New &amp; loved</h2></div><p>One small ritual is ready to begin today. The rest are taking their time.</p></div><div className="products-grid">{products.map((product) => <ProductCard key={product.id} product={product} onOpen={setSelectedProduct} onAdd={addToCart} />)}</div></div></section>
 
