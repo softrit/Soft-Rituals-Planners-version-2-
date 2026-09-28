@@ -1,0 +1,1 @@
+- [Soft Rituals visual direction](soft-rituals-direction.md) — preserve the existing editorial storefront identity; future work should polish behavior, not redesign it.

@@ -1,0 +1,88 @@
+I really like the current design and **I do NOT want to change the overall design, layout, branding, colors, or visual identity**. Please keep the website essentially as it is.
+
+What I would like you to improve is the **experience, animations, clarity, and small inefficiencies**, without redesigning the site.
+
+### 1. Add more animations
+
+* Add subtle, elegant animations throughout the website.
+* Use smooth fade-ins, slide-ups, hover effects, button interactions, and micro-animations where appropriate.
+* Keep the animations minimal and premium-looking — not excessive or distracting.
+* Make sure animations perform well on mobile and don't slow down the website.
+* Respect `prefers-reduced-motion` for accessibility.
+
+### 2. Make the product availability very clear
+
+At the moment, I want to clearly communicate that:
+
+* **Sunday Reset Planner is the ONLY product currently available for purchase.**
+* **Bundles and the other products are COMING SOON.**
+
+Please make this distinction immediately obvious to visitors without changing the overall design.
+
+For products that are not available yet:
+
+* Add a tasteful **"COMING SOON"** indication.
+* Make sure users don't mistake them for products that are currently available.
+* If appropriate, slightly animate the Coming Soon labels to attract attention without being annoying.
+* Keep the Sunday Reset Planner clearly highlighted as the product that is currently available.
+
+### 3. Improve the Desk Edit section
+
+Please review the **Desk Edit** section carefully and improve it where you see opportunities.
+
+I would like it to feel more polished, useful, and engaging while maintaining the existing visual style.
+
+Look for:
+
+* Better presentation of the content
+* Clearer hierarchy
+* Better spacing
+* More engaging interactions
+* Subtle animations
+* Any confusing or unnecessary elements
+* Any UX friction
+* Anything that feels inefficient or unfinished
+
+### 4. Find other inefficiencies
+
+Please audit the entire website and identify things that could be improved **without changing the design**.
+
+Pay particular attention to:
+
+* UX and navigation
+* Mobile responsiveness
+* Loading performance
+* Unnecessary code
+* Repeated or inefficient code
+* Accessibility
+* SEO basics
+* Buttons and links that could be clearer
+* Product availability messaging
+* Inconsistent spacing or interactions
+* Broken or unnecessary functionality
+* Images and assets that could be optimized
+
+### Important
+
+**Do not redesign the website.**
+
+I want to preserve:
+
+* The current design
+* Current colors
+* Typography
+* Branding
+* Layout
+* Overall aesthetic
+* Existing functionality
+
+Think of this as a **polish and optimization pass**, not a redesign.
+
+Before making major structural changes, inspect the existing code and prioritize improvements that have the biggest impact while keeping the current look and feel intact.
+
+After making the changes, please summarize:
+
+1. What you changed
+2. What you optimized
+3. Any issues you found
+4. Any recommendations for future improvements

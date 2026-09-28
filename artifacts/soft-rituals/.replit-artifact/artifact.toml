@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Soft Rituals"
+description = "A polished single-page storefront for Soft Rituals digital planners and desk tools, preserving the existing visual identity while improving clarity, motion, accessibility, and product availability messaging."
+version = "1.0.0"
+id = "artifacts/soft-rituals"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24271
+
+[services.development]
+run = "pnpm --filter @workspace/soft-rituals run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/soft-rituals", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/soft-rituals/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24271"
+BASE_PATH = "/"
