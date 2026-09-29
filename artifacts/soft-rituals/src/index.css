@@ -119,7 +119,7 @@ header.scrolled { border-color: var(--line-soft); background: color-mix(in srgb,
 .device-mock { position: absolute; z-index: 3; display: flex; width: 60%; max-width: 290px; aspect-ratio: 3 / 4; flex-direction: column; padding: 14px 12px; border-radius: 26px; background: linear-gradient(160deg, #463a34, #2e241f); box-shadow: var(--shadow); }
 .hero-device { top: 4%; left: 20%; }
 .device-cam { width: 6px; height: 6px; margin: 0 auto 10px; border-radius: 50%; background: rgba(255, 255, 255, .3); }
-.device-screen { display: flex; flex: 1; flex-direction: column; overflow: hidden; padding: 18px 16px; border-radius: 16px; background: var(--paper); }
+.device-screen { display: flex; flex: 1; flex-direction: column; overflow: hidden; padding: 10px 8px; border-radius: 16px; background: var(--paper); }
 .device-cover-image { width: 100%; height: 100%; object-fit: contain; object-position: center; border-radius: 10px; }
 .ds-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 14px; }
 .ds-month { color: var(--ink); font-family: var(--serif); font-size: 16px; font-style: italic; }
@@ -186,7 +186,7 @@ header.scrolled { border-color: var(--line-soft); background: color-mix(in srgb,
 .obj-3 { right: 20%; bottom: 14%; width: 20%; height: 20%; border-radius: 50% !important; background: var(--rose-deep); }
 .obj-4 { bottom: 16%; left: 10%; width: 34%; height: 8%; border-radius: 6px !important; background: var(--ink); opacity: .85; }
 .desk-ipad { bottom: 10%; left: 50%; z-index: 2; width: clamp(142px, 17vw, 190px); max-width: none; aspect-ratio: 3 / 5; transform: translateX(-50%) rotate(-3deg); }
-.desk-ipad .device-screen { padding: 14px 12px; }
+.desk-ipad .device-screen { padding: 8px 7px; }
 .desk-ipad .ds-header { margin-bottom: 10px; }
 .desk-ipad .ds-month { font-size: 18px; }
 .desk-ipad .ds-list .row { gap: 8px; padding: 9px 0; font-size: 12px; }
@@ -402,7 +402,7 @@ footer { padding: 72px 0 24px; border-top: 1px solid var(--line); }
   .expand-frame { width: 82vw; height: 52vh; }
   .desk-illustration { transform: scale(.75); }
   .desk-ipad { bottom: 9%; left: 50%; width: 138px; }
-  .desk-ipad .device-screen { padding: 12px 10px; }
+  .desk-ipad .device-screen { padding: 7px 6px; }
   .desk-ipad .ds-month { font-size: 16px; }
   .desk-ipad .ds-list .row { font-size: 10px; }
   .desk-note { width: 132px; padding: 10px; }
