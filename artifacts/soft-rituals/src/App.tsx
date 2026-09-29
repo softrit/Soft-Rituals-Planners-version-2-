@@ -121,18 +121,7 @@ function Device({ showcase = false, hero = false }: { showcase?: boolean; hero?:
   return (
     <div className={`device-mock ${showcase ? 'showcase-device' : ''} ${hero ? 'hero-device' : ''}`} aria-label="Preview of the Sunday Reset planner">
       <div className="device-cam" />
-      <div className="device-screen">
-        <div className="ds-header"><span className="ds-month">{hero ? 'Sunday Reset' : 'September'}</span><span className="ds-dots">•••</span></div>
-        {hero && <div className="ds-cal"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span><div className="day">3</div><div className="day">4</div><div className="day">5</div><div className="day">6</div><div className="day active">7</div><div className="day">8</div><div className="day">9</div></div>}
-        {!hero && <div className="ds-cal"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span><div className="day">15</div><div className="day">16</div><div className="day active">17</div><div className="day">18</div><div className="day">19</div><div className="day">20</div><div className="day">21</div></div>}
-        <div className="ds-list">
-          <div className="row"><span className="box done" /> {hero ? 'Water the plants' : 'Morning pages'}</div>
-          <div className="row"><span className="box done" /> {hero ? 'Plan next week' : 'Reply to Mia'}</div>
-          <div className="row"><span className="box" /> {hero ? 'Read a few pages' : 'Weekly grocery list'}</div>
-          <div className="row"><span className="box" /> {hero ? 'Light a candle' : 'Sunday reset ritual'}</div>
-          {!hero && <div className="row"><span className="box" /> Read before bed</div>}
-        </div>
-      </div>
+      <div className="device-screen"><PlannerCoverImage className="device-cover-image" /></div>
       {hero && <div className="card-label">Digital Planner</div>}
     </div>
   );
@@ -142,19 +131,16 @@ function Reveal({ children, className = '' }: { children: React.ReactNode; class
   return <div className={`reveal ${className}`}>{children}</div>;
 }
 
+const plannerCoverSrc = `${import.meta.env.BASE_URL}reset-planner-cover.png`;
+
+function PlannerCoverImage({ className = '', alt = '' }: { className?: string; alt?: string }) {
+  return <img className={className} src={plannerCoverSrc} alt={alt} />;
+}
+
 function PlannerProductMockup() {
   return (
-    <div className="planner-product-mockup" aria-hidden="true">
-      <div className="planner-product-shadow" />
-      <div className="planner-product-device">
-        <div className="planner-product-screen">
-          <div className="planner-product-top"><span>Sunday Reset</span><span>2027</span></div>
-          <div className="planner-product-week"><span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span><span>SUN</span><b>03</b><b>04</b><b>05</b><b>06</b><b className="active">07</b><b>08</b><b>09</b></div>
-          <div className="planner-product-lines"><span /><span /><span /><span /></div>
-          <div className="planner-product-footer">A gentle plan for the week ahead.</div>
-        </div>
-      </div>
-      <div className="planner-product-paper"><strong>Sunday Reset</strong><span>Digital planner</span><i /></div>
+    <div className="planner-product-mockup">
+      <PlannerCoverImage className="planner-product-image" />
     </div>
   );
 }
@@ -363,10 +349,7 @@ function AppContent() {
                 <div className="obj obj-1" /><div className="obj obj-2" /><div className="obj obj-3" /><div className="obj obj-4" />
                 <div className="device-mock desk-ipad">
                   <div className="device-cam" />
-                  <div className="device-screen">
-                    <div className="ds-header"><span className="ds-month">Today</span><span className="ds-dots">•••</span></div>
-                    <div className="ds-list"><div className="row"><span className="box done" /> Tidy the desk</div><div className="row"><span className="box" /> Light the candle</div></div>
-                  </div>
+                  <div className="device-screen"><PlannerCoverImage className="device-cover-image" /></div>
                 </div>
                 <svg className="desk-illustration desk-notebook" viewBox="0 0 120 120" width="64" aria-hidden="true"><rect x="20" y="24" width="70" height="86" rx="6" fill="var(--cream)" stroke="var(--ink)" strokeWidth="2" transform="rotate(-6 55 67)" /><path d="m34 46 42-8M36 58l42-8M38 70l30-6" stroke="var(--taupe)" strokeWidth="2" strokeLinecap="round" transform="rotate(-6 55 67)" /><path d="m78 30 20-14M96 14l5 5" stroke="var(--rose-deep)" strokeWidth="3" strokeLinecap="round" /></svg>
                 <svg className="desk-illustration desk-plant" viewBox="0 0 120 120" width="70" aria-hidden="true"><path d="M42 78h36l-5 24a4 4 0 0 1-4 3H51a4 4 0 0 1-4-3z" fill="var(--cocoa)" /><path d="M60 78V40" stroke="var(--ink)" strokeWidth="2" /><path d="M60 55c-14-4-18-16-14-26 12 2 18 12 14 26z" fill="var(--lilac)" stroke="var(--ink)" strokeWidth="1.5" /><path d="M60 66c14-2 20-12 18-22-13 0-20 8-18 22z" fill="var(--sky)" stroke="var(--ink)" strokeWidth="1.5" /></svg>
@@ -408,12 +391,12 @@ function AppContent() {
       <div className={`cart-overlay ${cartOpen ? 'open' : ''}`} onClick={() => setCartOpen(false)} />
       <aside className={`cart-drawer ${cartOpen ? 'open' : ''}`} aria-label="Shopping cart" aria-hidden={!cartOpen}>
         <div className="cart-head"><h3>Your cart</h3><button className="icon-btn" type="button" onClick={() => setCartOpen(false)} aria-label="Close cart" data-testid="button-close-cart"><Icon name="close" /></button></div>
-        <div className="cart-items">{cartItems.length === 0 ? <div className="cart-empty">Your cart is quietly empty.<br />Add something you will enjoy using.</div> : cartItems.map((product) => <div className="cart-item" key={product.id}><div className={`cart-item-thumb ${product.img}`} /><div className="cart-item-info"><div className="cart-item-name">{product.name}</div><div className="cart-item-meta">Digital · {product.price} €</div><div className="cart-item-row"><div className="qty-control"><button type="button" onClick={() => updateQuantity(product.id, -1)} aria-label={`Decrease ${product.name} quantity`} data-testid={`button-decrease-${product.id}`}><Icon name="minus" /></button><span>{cart[product.id]}</span><button type="button" onClick={() => updateQuantity(product.id, 1)} aria-label={`Increase ${product.name} quantity`} data-testid={`button-increase-${product.id}`}><Icon name="plus" /></button></div><button className="remove-link" type="button" onClick={() => updateQuantity(product.id, -cart[product.id])} data-testid={`button-remove-${product.id}`}>Remove</button></div></div></div>)}</div>
+        <div className="cart-items">{cartItems.length === 0 ? <div className="cart-empty">Your cart is quietly empty.<br />Add something you will enjoy using.</div> : cartItems.map((product) => <div className="cart-item" key={product.id}><div className={`cart-item-thumb ${product.img} planner-thumb`}><PlannerCoverImage /></div><div className="cart-item-info"><div className="cart-item-name">{product.name}</div><div className="cart-item-meta">Digital · {product.price} €</div><div className="cart-item-row"><div className="qty-control"><button type="button" onClick={() => updateQuantity(product.id, -1)} aria-label={`Decrease ${product.name} quantity`} data-testid={`button-decrease-${product.id}`}><Icon name="minus" /></button><span>{cart[product.id]}</span><button type="button" onClick={() => updateQuantity(product.id, 1)} aria-label={`Increase ${product.name} quantity`} data-testid={`button-increase-${product.id}`}><Icon name="plus" /></button></div><button className="remove-link" type="button" onClick={() => updateQuantity(product.id, -cart[product.id])} data-testid={`button-remove-${product.id}`}>Remove</button></div></div></div>)}</div>
         <div className="cart-foot"><div className="cart-subtotal"><span>Subtotal</span><strong>{subtotal} €</strong></div><button className="btn btn-primary btn-disabled" type="button" disabled data-testid="button-checkout">Proceed to checkout</button><div className="cart-hint">Checkout is being prepared — your items are saved here for now.</div></div>
       </aside>
 
       <div className={`product-overlay ${selectedProduct ? 'open' : ''}`} onClick={() => setSelectedProduct(null)} />
-      {selectedProduct && <div className="product-modal open" role="dialog" aria-modal="true" aria-labelledby="product-modal-title"><button className="product-modal-close" type="button" onClick={() => setSelectedProduct(null)} aria-label="Close product details" data-testid="button-close-product"><Icon name="close" /></button><div className="product-modal-inner"><div className="product-modal-visual"><div className={`pm-main-img ${selectedProduct.img}`} /><div className="pm-thumbs"><div className={`pm-thumb ${selectedProduct.img}`} /><div className={`pm-thumb ${selectedProduct.img}`} /></div></div><div className="product-modal-info"><span className="product-tag" style={{ position: 'static' }}>Available now</span><h3 id="product-modal-title">{selectedProduct.name}</h3><div className="pm-price">{selectedProduct.price} € <span className="price-was">{selectedProduct.originalPrice} €</span></div><p className="pm-description">{selectedProduct.description}</p><div className="pm-includes">{selectedProduct.includes.map((item) => <div key={item}>{item}</div>)}</div><button className="btn btn-primary" type="button" onClick={() => { addToCart(selectedProduct.id); setSelectedProduct(null); }} data-testid="button-modal-add">Add to cart {iconArrow}</button><div className="cart-hint">Instant digital delivery. Ready to open this evening.</div></div></div></div>}
+      {selectedProduct && <div className="product-modal open" role="dialog" aria-modal="true" aria-labelledby="product-modal-title"><button className="product-modal-close" type="button" onClick={() => setSelectedProduct(null)} aria-label="Close product details" data-testid="button-close-product"><Icon name="close" /></button><div className="product-modal-inner"><div className="product-modal-visual"><div className={`pm-main-img ${selectedProduct.img}`}><PlannerCoverImage alt={selectedProduct.name} /></div><div className="pm-thumbs"><div className={`pm-thumb ${selectedProduct.img} active`}><PlannerCoverImage /></div></div></div><div className="product-modal-info"><span className="product-tag" style={{ position: 'static' }}>Available now</span><h3 id="product-modal-title">{selectedProduct.name}</h3><div className="pm-price">{selectedProduct.price} € <span className="price-was">{selectedProduct.originalPrice} €</span></div><p className="pm-description">{selectedProduct.description}</p><div className="pm-includes">{selectedProduct.includes.map((item) => <div key={item}>{item}</div>)}</div><button className="btn btn-primary" type="button" onClick={() => { addToCart(selectedProduct.id); setSelectedProduct(null); }} data-testid="button-modal-add">Add to cart {iconArrow}</button><div className="cart-hint">Instant digital delivery. Ready to open this evening.</div></div></div></div>}
       {toast && <div className="toast" role="status">{toast}</div>}
     </>
   );
